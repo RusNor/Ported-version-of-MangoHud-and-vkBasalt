@@ -4,7 +4,7 @@
 ![Screenshot_20220514_144124](https://user-images.githubusercontent.com/85447162/168424523-ed359a14-970a-4016-8631-ac33db55d574.png)
 ![Screenshot_20220514_144158](https://user-images.githubusercontent.com/85447162/168424525-a0beed9a-6180-403d-a37f-196c978ceee7.png)
 # to use it, you need to download the archive and unpack it into a directory convenient for you
- if vine is used then so 
+ if wine is used then so 
 /home/$USER/utils/run_utils wine name.exe
 
 if steam is used then so 
