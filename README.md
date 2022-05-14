@@ -8,10 +8,10 @@ as you can see on the screenshots GameMode MangoHud and vkBasalt work without pr
 
 # to use it, you need to download the archive and unpack it into a directory convenient for you
 
-if wine is used then so 
+# if wine is used then so 
 /home/$USER/utils/run_utils wine name.exe
 
-if steam is used then so 
+# if steam is used then so 
 /home/$USER/utils/run_utils %command%
 
 that is, in fact, you specify the path to run_utils
