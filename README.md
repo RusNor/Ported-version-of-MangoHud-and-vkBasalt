@@ -1,1 +1,1 @@
-# Ported version of gamemode MangoHud and vkBasalt
+Ported version of GameMode MangoHud and vkBasalt
