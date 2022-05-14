@@ -18,5 +18,4 @@ I unpacked the archive that's how convenient it is for me, you can specify your 
 /home/rus_nor/.steam/root/utils/run_utils %command%
 
 # discord channel welcome
-
 https://discord.gg/37FrGUpDEj
