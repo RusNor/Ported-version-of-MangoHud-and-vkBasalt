@@ -14,4 +14,5 @@ if steam is used then so
 that is, in fact, you specify the path to run_utils
 
 I unpacked the archive that's how convenient it is for me, you can specify your path
+
 /home/rus_nor/.steam/root/utils/run_utils %command%
