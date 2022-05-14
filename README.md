@@ -14,8 +14,7 @@ as you can see on the screenshots GameMode MangoHud and vkBasalt work without pr
 # if steam is used then so 
 /home/$USER/utils/run_utils %command%
 
-that is, in fact, you specify the path to run_utils
-
+# that is, in fact, you specify the path to run_utils
 # I unpacked the archive that's how convenient it is for me, you can specify your path
 
 /home/rus_nor/.steam/root/utils/run_utils %command%
