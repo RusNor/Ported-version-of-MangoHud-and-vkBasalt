@@ -4,15 +4,13 @@
 ![Screenshot_20220620_185210](https://user-images.githubusercontent.com/85447162/174639842-36443e53-d162-4ffe-8aee-c160cc4279f0.png)
 ![Screenshot_20220620_185332](https://user-images.githubusercontent.com/85447162/174639848-b85541a8-8756-4f27-9055-a0c5fc55c5e1.png)
 
-as you can see on the screenshots GameMode MangoHud and vkBasalt work without problems
+Download the latest release make the file executable throw it into the terminal and click enter
 
-# to use it, you need to download the archive and unpack it into a directory convenient for you
+if wine is used then so
+gmv wine name.exe
 
-# if wine is used then so 
-/home/$USER/utils/run_utils wine name.exe
+if steam is used then so
+gmv %command%
 
-# if steam is used then so 
-/home/$USER/utils/run_utils %command%
-
-# discord channel welcome
+discord channel welcome
 https://discord.gg/37FrGUpDEj
