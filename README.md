@@ -12,10 +12,10 @@ If you use Wine, all you have to do is enter the command gmv in the terminal:
 gmv wine name.exe
 ```
 
-or any other application:
+or just enter a command for the test:
 
 ```bash
-gmv vkcube
+gmv
 ```
 
 If you use Steam, insert the following command in the game properties:
