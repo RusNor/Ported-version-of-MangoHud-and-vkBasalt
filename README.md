@@ -7,7 +7,7 @@ Download the latest [version of gmv](https://github.com/RusNor/Ported-version-of
 
 or you can download and install with a command from the terminal:
 ```bash
-curl -s https://api.github.com/repos/RusNor/Ported-version-of-MangoHud-and-vkBasalt/releases/latest | grep "install_gmv_utils_v" | cut -d : -f 2,3 | tr -d \" | wget -qi - && chmod +x install_gmv_utils_v* && sh install_gmv_utils_v*
+curl -s https://api.github.com/repos/RusNor/Ported-version-of-MangoHud-and-vkBasalt/releases/latest | grep "install_gmv_utils_v" | cut -d : -f 2,3 | tr -d \" | wget -qi - | chmod +x $HOME/install_gmv_utils_v* && sh install_gmv_utils_v*
 ```
 ## How to use?
 If you use Wine, all you have to do is enter the command gmv in the terminal:
