@@ -10,6 +10,18 @@ or you can download and install with a command from the terminal:
 curl -s https://api.github.com/repos/RusNor/Ported-version-of-MangoHud-and-vkBasalt/releases/latest | grep "install_gmv_utils_v" | cut -d : -f 2,3 | tr -d \" | wget -qi - || chmod +x $HOME/install_gmv_utils_v* && sh install_gmv_utils_v*
 ```
 ## How to use?
+
+You can set your own value to limit fps 
+
+```bash
+FPS=60 gmv
+```
+Force use opengl
+
+```bash
+OPENGL=1 gmv
+```
+
 If you use Wine, all you have to do is enter the command gmv in the terminal:
 
 ```bash
