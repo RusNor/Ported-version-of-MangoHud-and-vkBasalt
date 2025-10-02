@@ -1,4 +1,4 @@
-# Ported version of GameMode MangoHud and vkBasalt (gmv)
+# Ported version of MangoHud and vkBasalt (gmv)
 ![gmv_1](https://user-images.githubusercontent.com/85447162/174639836-80bc95e0-1ae8-48c1-b119-da3370955e25.png)
 
 ## installation
@@ -45,4 +45,5 @@ gmv %command%
 ## About
 
 discord channel welcome [Click](https://discord.gg/37FrGUpDEj)
+
 
