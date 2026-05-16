@@ -9,33 +9,37 @@ Download the latest [version of gmv](https://github.com/RusNor/Ported-version-of
 
 You can set your own value to limit fps 
 
-```bash
+```
 FPS=60 gmv
 ```
 Force use opengl
 
-```bash
+```
 OPENGL=1 gmv
 ```
 
 If you use Wine, all you have to do is enter the command gmv in the terminal:
 
-```bash
+```
 gmv wine name.exe
 ```
 
-or just enter a command for the test:
+Or just enter a command for the test:
 
-```bash
+```
 gmv
 ```
+Vulkan
+![gmv_2](https://github.com/user-attachments/assets/5023129c-c10c-4c02-8006-f01c91272d7c)
+OpenGL
+![gmv_3](https://github.com/user-attachments/assets/53baf40c-1961-4493-a564-39d37f92e860)
 
 If you use Steam, insert the following command in the game properties:
 
-```bash
+```
 gmv %command%
 ```
-![gmv_2](https://github.com/user-attachments/assets/b91a9b6b-9d16-4fdc-acab-014a3b9c48e8)
+![gmv_4](https://github.com/user-attachments/assets/b91a9b6b-9d16-4fdc-acab-014a3b9c48e8)
 
 ## About
 
