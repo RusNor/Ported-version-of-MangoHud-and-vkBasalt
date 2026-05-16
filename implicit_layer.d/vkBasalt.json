@@ -1,0 +1,21 @@
+{
+  "file_format_version" : "1.0.0",
+  "layer" : {
+    "name": "SW_VK_LAYER_VKBASALT_post_processing",
+    "type": "GLOBAL",
+    "library_path": "libvkbasalt.so",
+    "api_version": "1.3.223",
+    "implementation_version": "1",
+    "description": "a post processing layer",
+    "functions": {
+      "vkGetInstanceProcAddr": "vkBasalt_GetInstanceProcAddr",
+      "vkGetDeviceProcAddr":   "vkBasalt_GetDeviceProcAddr"
+    },
+    "enable_environment": {
+      "ENABLE_VKBASALT": "on"
+    },
+    "disable_environment": {
+      "DISABLE_VKBASALT": "on"
+    }
+  }
+}

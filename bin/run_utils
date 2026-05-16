@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+
+export UTILS_PATH="${HOME}/.local/share/gmv-utils"
+
+export GMV_VER=2,1
+
+echo "${GMV_VER}" > "${UTILS_PATH}/version"
+export PATH="${PATH}:${UTILS_PATH}/bin"
+export VK_LAYER_PATH="${VK_LAYER_PATH}:${UTILS_PATH}/implicit_layer.d"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${UTILS_PATH}/libs/lib:${UTILS_PATH}/libs/lib32"
+
+export MANGOHUD=on
+export MANGOHUD_LOG_LEVEL=off
+
+export MANGOHUD_CONFIG="round_corners=10,\
+                        fps_color_change,\
+                        cpu_load_change,\
+                        gpu_load_change,\
+                        core_load_change,\
+                        cpu_stats,cpu_temp,\
+                        cpu_mhz,cpu_color=2e97cb,\
+                        cpu_text=CPU,gpu_stats,\
+                        gpu_temp,gpu_core_clock,\
+                        gpu_mem_clock,\
+                        gpu_color=2e9762,\
+                        gpu_text=GPU,\
+                        vram,\
+                        vram_color=ad64c1,\
+                        ram,\
+                        ram_color=c26693,\
+                        io_color=a491d3,\
+                        frame_timing=1,\
+                        frametime_color=00ff00,\
+                        wine,\
+                        wine_color=eb5b5b,\
+                        engine_color=eb5b5b,\
+                        media_player_color=ffffff,\
+                        background_alpha=0.2,\
+                        font_size=20,\
+                        background_color=020202,\
+                        text_color=ffffff,\
+                        toggle_hud=Shift_R+F12,\
+                        media_player_name=spotify,\
+                        fps_limit=${FPS}+0,\
+                        toggle_fps_limit=Shift_L+F1,\
+                        winesync,\
+                        horizontal"
+
+export VK_INSTANCE_LAYERS="${VK_INSTANCE_LAYERS}:SW_VK_LAYER_MANGOHUD_overlay"
+
+export ENABLE_VKBASALT=on
+export VKBASALT_LOG_LEVEL="none"
+export VKBASALT_SHADER_PATH="${UTILS_PATH}/Shaders"
+export VKBASALT_CONFIG_FILE="${UTILS_PATH}/config/vkBasalt.conf"
+export VK_INSTANCE_LAYERS="${VK_INSTANCE_LAYERS}:SW_VK_LAYER_VKBASALT_post_processing"
+
+if [ "${OPENGL}" == "1" ]; then
+    unset VK_INSTANCE_LAYERS
+    export GMV_TEST="glxgears"
+    export RUN_MANGOHUD="${UTILS_PATH}/bin/mangohud --dlsym"
+
+    [ "$(command -v notify-send)" ] && \
+        notify-send -t 1000 -a "GMV" "OpenGL MODE"
+
+    if [ -z "$1" ]; then
+        ${RUN_MANGOHUD} ${GMV_TEST} "$@"
+    else
+        ${RUN_MANGOHUD} "$@"
+    fi
+else
+    export GMV_TEST="vkcube"
+
+    [ "$(command -v notify-send)" ] && \
+        notify-send -t 1000 -a "GMV" "Vulkan MODE"
+
+    if [ -z "$1" ]; then
+        ${GMV_TEST} "$@"
+    else
+        "$@"
+    fi
+
+fi
+
