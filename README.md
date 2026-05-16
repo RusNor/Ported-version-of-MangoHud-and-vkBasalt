@@ -1,5 +1,5 @@
 # Ported version of MangoHud and vkBasalt (gmv)
-![gmv_1](https://user-images.githubusercontent.com/85447162/174639836-80bc95e0-1ae8-48c1-b119-da3370955e25.png)
+![gmv_1](https://github.com/user-attachments/assets/efb2067c-106b-4bd0-b2e3-a0b5315e6fbc)
 
 ## installation
 
@@ -35,8 +35,7 @@ If you use Steam, insert the following command in the game properties:
 ```bash
 gmv %command%
 ```
-
-![gmv_2](https://user-images.githubusercontent.com/85447162/174639828-cb69b4f2-2f96-4eff-b8c4-4bb724efc643.png)
+![gmv_2](https://github.com/user-attachments/assets/b91a9b6b-9d16-4fdc-acab-014a3b9c48e8)
 
 ## About
 
