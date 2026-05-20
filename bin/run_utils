@@ -2,16 +2,15 @@
 
 export UTILS_PATH="${HOME}/.local/share/gmv-utils"
 
-export GMV_VER=2,1
-
+export GMV_VER=2,2
 echo "${GMV_VER}" > "${UTILS_PATH}/version"
+
 export PATH="${PATH}:${UTILS_PATH}/bin"
 export VK_LAYER_PATH="${VK_LAYER_PATH}:${UTILS_PATH}/implicit_layer.d"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${UTILS_PATH}/libs/lib:${UTILS_PATH}/libs/lib32"
 
 export MANGOHUD=on
 export MANGOHUD_LOG_LEVEL=off
-
 export MANGOHUD_CONFIG="round_corners=10,\
                         fps_color_change,\
                         cpu_load_change,\
@@ -46,38 +45,20 @@ export MANGOHUD_CONFIG="round_corners=10,\
                         winesync,\
                         horizontal"
 
-export VK_INSTANCE_LAYERS="${VK_INSTANCE_LAYERS}:SW_VK_LAYER_MANGOHUD_overlay"
-
 export ENABLE_VKBASALT=on
 export VKBASALT_LOG_LEVEL="none"
-export VKBASALT_SHADER_PATH="${UTILS_PATH}/Shaders"
 export VKBASALT_CONFIG_FILE="${UTILS_PATH}/config/vkBasalt.conf"
-export VK_INSTANCE_LAYERS="${VK_INSTANCE_LAYERS}:SW_VK_LAYER_VKBASALT_post_processing"
+export VK_INSTANCE_LAYERS="${VK_INSTANCE_LAYERS}:SW_VK_LAYER_MANGOHUD_overlay:SW_VK_LAYER_VKBASALT_post_processing"
 
-if [ "${OPENGL}" == "1" ]; then
-    unset VK_INSTANCE_LAYERS
-    export GMV_TEST="glxgears"
-    export RUN_MANGOHUD="${UTILS_PATH}/bin/mangohud --dlsym"
-
-    [ "$(command -v notify-send)" ] && \
-        notify-send -t 1000 -a "GMV" "OpenGL MODE"
-
-    if [ -z "$1" ]; then
-        ${RUN_MANGOHUD} ${GMV_TEST} "$@"
-    else
-        ${RUN_MANGOHUD} "$@"
-    fi
-else
+if [ "$(command -v vkcube)" ]; then
     export GMV_TEST="vkcube"
+else
+    export GMV_TEST="glxgears"
+fi
 
-    [ "$(command -v notify-send)" ] && \
-        notify-send -t 1000 -a "GMV" "Vulkan MODE"
-
-    if [ -z "$1" ]; then
-        ${GMV_TEST} "$@"
-    else
-        "$@"
-    fi
-
+if [ -z "$1" ]; then
+    mangohud ${GMV_TEST} "$@"
+else
+    mangohud "$@"
 fi
 

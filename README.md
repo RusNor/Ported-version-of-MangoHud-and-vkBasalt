@@ -12,11 +12,6 @@ You can set your own value to limit fps
 ```
 FPS=60 gmv
 ```
-Force use opengl
-
-```
-OPENGL=1 gmv
-```
 
 If you use Wine, all you have to do is enter the command gmv in the terminal:
 
